@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/judulApk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hitung Biaya Setelah Diskon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#5F7161"/>
+
+    <TextView
+        android:id="@+id/textDiskon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Input Diskon (%)"
+        app:layout_constraintTop_toBottomOf="@id/judulApk"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:textColor="#6D8B74"/>
+
+    <EditText
+        android:id="@+id/isiDiskon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textDiskon"
+        app:layout_constraintStart_toStartOf="@id/textDiskon"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="#EFEAD8"
+        android:inputType="numberDecimal"
+        android:textColor="#413F42"/>
+
+    <TextView
+        android:id="@+id/textItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Harga Item (Rp)"
+        android:textColor="#6D8B74"
+        app:layout_constraintStart_toStartOf="@id/textDiskon"
+        app:layout_constraintTop_toBottomOf="@id/isiDiskon"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/isiItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/isiDiskon"
+        android:background="#EFEAD8"
+        app:layout_constraintTop_toBottomOf="@id/textItem"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:inputType="numberDecimal"
+        android:textColor="#413F42"/>
+
+    <Button
+        android:id="@+id/btnHitung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hitung"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="50dp"/>
+
+    <TextView
+        android:id="@+id/tampilanError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/isiItem"
+        tools:text="Error"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
